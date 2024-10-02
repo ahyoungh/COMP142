@@ -1,0 +1,14 @@
+What bugs and conceptual difficulties did you encounter? How did you overcome them? What did you learn?
+- Besides bugs in the form of ladybugs, I encountered the most problems while writing ImitationBug and CongaBug. In both cases, capturing the bug's first moves and returning it in getLastStep() was challenging, and I had to keep track of the previous move in order to return the correct "current" move. 
+  - More specifically, when writing ImitationBug (the second one - imitating RoutineBug), it would skip the first step in the routine. I fixed it by returning `currentStep-1` for getLastStep() to return the step the bug had _just_ completed rather than the one it was on. 
+    - ImitationBug would also run into an error when the array started over, because index `0-1` would be out of bounds. I had to write an if statement so that it would execute the last step in the array if the current index was 0. 
+- Overall, the project helped me see how classes can work in relation to each other. Since you are inheriting existing classes, it makes it much easier to do what you want with code and play around with it. There is less to worry about in terms of "writing" the actual code and dealing with errors / bugs. 
+Describe whatever help (if any) that you received. Don’t include readings, lectures, and exercises, but do include any help from other sources, such as websites or people (including classmates and friends) and attribute them by name.
+- I did not receive help on this project. The instructions on the webpage were sufficient. 
+Describe any serious problems you encountered while writing the program.
+- The second CongaBug (the one following the first CongaBug) would follow the leader instead of the CongaBug. I had to create a `savedStep` variable to work in conjuction with the `currentStep` variable, so that the current step would not just directly transfer over from the initial LeaderBug. 
+Did you do any of the challenges (see below)? If so, explain what you did.
+- I did not complete the challenge on the assignement. However, I added a way for the user to choose the speed of the dance (slow, normal, fast). This required creating an instance variable, and making sure the pause time was set in each of the dance floors. 
+List any other feedback you have. Feel free to provide any feedback on how much you learned from doing the assignment, and whether you enjoyed doing it.
+- This project was fun! Conceptually, it was not challenging to understand. In terms of execution / writing code, it was disorienting at first to keep track of all the different classes, but by the end my understanding grew better. 
+- Less instruction for the final few methods would have been helpful in navigating and constructing my own understanding of inheritance, rather than just systematically following the instructions. That would have encouraged more independent thinking and close reading code.
